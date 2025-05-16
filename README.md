@@ -1,5 +1,77 @@
-# Landsat7
-Position estimation of the Landsat7 satellite through an Extended Kalman filter
-The satellite data are taken from the Google Earth Engine Platform and represent the position of the center of the images taken by the satellite on May 5, 2015.
-The Python program takes the images in the file and uses a Kalman Filter to estimate the satellite's position.
-Three graphs are then shown: the first represents the estimated and accurate trajectory in the orbital plane, the second the measurement errors, and the third the trajectory on a flat map of the Earth.
+
+# 🚀 Landsat 7 Satellite Position Estimation with Extended Kalman Filter
+
+![Landsat 7 EKF](A_README_image_for_a_project_titled_"Landsat_7_Sat.png)
+
+This project implements an **Extended Kalman Filter (EKF)** to estimate the **position of the Landsat 7 satellite** based on observation data. The data, extracted from **Google Earth Engine**, contains the satellite's image center positions recorded on **May 5, 2015**.
+
+---
+
+## 📂 Project Overview
+
+Satellite tracking and position estimation are critical for remote sensing missions and Earth observation.  
+This Python project leverages **EKF techniques** to fuse noisy position measurements and predict the satellite's orbit with higher precision.
+
+---
+
+## 🛰 Data
+
+- **Source**: Google Earth Engine  
+- **Content**: Center position of Landsat 7 images taken on **May 5, 2015**
+- **Format**: CSV (`ls7_data_5_10_2015.csv`)
+
+---
+
+## ⚙ How It Works
+
+1. **Input Data**: Reads satellite position data in spherical coordinates (longitude, latitude, timestamp).
+2. **Preprocessing**: Converts the data into Cartesian coordinates and calculates orbital parameters.
+3. **Extended Kalman Filter**:
+   - Initializes the filter using the first few measurements.
+   - Predicts and updates the state estimate at each timestamp.
+   - Outputs the estimated trajectory.
+4. **Visualization**:
+   - 3D plot of the real and estimated orbit.
+   - Error plots over time for each component.
+   - Projection of the trajectory onto a 2D map.
+
+---
+
+## 📊 Outputs
+
+| Plot Type        | Description                                      |
+|------------------|--------------------------------------------------|
+| 3D Orbit Plot    | Real vs. estimated trajectory in 3D space        |
+| Error Plots      | Component-wise estimation error over time        |
+| 2D Map Projection| Orbit trajectory plotted on Earth's flat map     |
+
+---
+
+## 🛠 Requirements
+
+- Python 3.x
+- NumPy
+- Pandas
+- Matplotlib
+
+Install all dependencies using:
+```bash
+pip install numpy pandas matplotlib
+```
+
+---
+
+## 🚀 Run the Project
+
+Make sure `ls7_data_5_10_2015.csv` is in the same directory and run:
+
+```bash
+python extended_Kalman.py
+```
+
+---
+
+## 📄 References
+
+- Data: Google Earth Engine
+- Methods: Extended Kalman Filter theory applied to orbital dynamics
