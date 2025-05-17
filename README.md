@@ -1,7 +1,7 @@
 
 # 🚀 Landsat 7 Satellite Position Estimation with Extended Kalman Filter
 
-![Landsat 7 EKF](Landsat_7.jpg)
+![Landsat 7 EKF](Landsat7.jpg)
 
 This project implements an **Extended Kalman Filter (EKF)** to estimate the **position of the Landsat 7 satellite** based on observation data. The data, extracted from **Google Earth Engine**, contains the satellite's image center positions recorded on **May 5, 2015**.
 
