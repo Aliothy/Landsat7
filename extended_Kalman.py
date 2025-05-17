@@ -2,7 +2,6 @@ import numpy as np
 import pandas as pd
 from datetime import datetime
 import matplotlib.pyplot as plt
-import matplotlib.animation as animation
 
 def data2s(data):
     format_data = '%H:%M:%S.%f'
@@ -238,7 +237,7 @@ fig3 = plt.figure(3)
 ax = plt.axes()
 ax.set_xlim(-180,180)
 ax.set_ylim(-90,90)
-ax.set_xlabel(r' longitude $\theta$ ')
+ax.set_xlabel(' longitude $\theta$ ')
 ax.set_ylabel(' latitude  $ \phi $')
 ax.scatter(doc[:,0]*180/np.pi,doc[:,1]*180/np.pi,color='red',s=5)
 ax.scatter(tetaphi[:,0],tetaphi[:,1],color='green',s=5)
